@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+*/
+
+@layer base {
+  :root {
+    --background: rgb(249, 250, 251);
+    --foreground: rgb(17, 24, 39);
+
+    --card: rgb(255, 255, 255);
+    --card-foreground: rgb(17, 24, 39);
+
+    --popover: rgb(255, 255, 255);
+    --popover-foreground: rgb(17, 24, 39);
+
+    --primary: rgb(16, 185, 129);
+    --primary-foreground: rgb(255, 255, 255);
+
+    --secondary: rgb(243, 244, 246);
+    --secondary-foreground: rgb(75, 85, 99);
+
+    --muted: rgb(243, 244, 246);
+    --muted-foreground: rgb(107, 114, 128);
+
+    --accent: rgb(209, 213, 219);
+    --accent-foreground: rgb(31, 41, 55);
+
+    --destructive: rgb(239, 68, 68);
+    --destructive-foreground: rgb(255, 255, 255);
+
+    --border: rgb(229, 231, 235);
+    --input: rgb(229, 231, 235);
+    --ring: rgb(16, 185, 129);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: rgb(255, 255, 255);
+    --sidebar-foreground: rgb(75, 85, 99);
+    --sidebar-primary: rgb(16, 185, 129);
+    --sidebar-primary-foreground: rgb(255, 255, 255);
+    --sidebar-accent: rgb(243, 244, 246);
+    --sidebar-accent-foreground: rgb(31, 41, 55);
+    --sidebar-border: rgb(229, 231, 235);
+    --sidebar-ring: rgb(16, 185, 129);
+
+    --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-heading: 'Poppins', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  }
+
+  .dark {
+    --background: rgb(17, 24, 39);
+    --foreground: rgb(243, 244, 246);
+
+    --card: rgb(31, 41, 55);
+    --card-foreground: rgb(243, 244, 246);
+
+    --popover: rgb(31, 41, 55);
+    --popover-foreground: rgb(243, 244, 246);
+
+    --primary: rgb(16, 185, 129);
+    --primary-foreground: rgb(255, 255, 255);
+
+    --secondary: rgb(55, 65, 81);
+    --secondary-foreground: rgb(243, 244, 246);
+
+    --muted: rgb(55, 65, 81);
+    --muted-foreground: rgb(156, 163, 175);
+
+    --accent: rgb(75, 85, 99);
+    --accent-foreground: rgb(243, 244, 246);
+
+    --destructive: rgb(220, 38, 38);
+    --destructive-foreground: rgb(255, 255, 255);
+
+    --border: rgb(55, 65, 81);
+    --input: rgb(55, 65, 81);
+    --ring: rgb(16, 185, 129);
+
+    --sidebar-background: rgb(31, 41, 55);
+    --sidebar-foreground: rgb(209, 213, 219);
+    --sidebar-primary: rgb(16, 185, 129);
+    --sidebar-primary-foreground: rgb(255, 255, 255);
+    --sidebar-accent: rgb(55, 65, 81);
+    --sidebar-accent-foreground: rgb(243, 244, 246);
+    --sidebar-border: rgb(55, 65, 81);
+    --sidebar-ring: rgb(16, 185, 129);
+  }
+}
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-green-600;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.3s ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
